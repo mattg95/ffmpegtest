@@ -7,7 +7,8 @@
  */
 
 import React from 'react';
-// import Video from 'react-native-video';
+import Video from 'react-native-video';
+import MediaControls, {PLAYER_STATES} from 'react-native-media-controls';
 import {
   Image,
   StyleSheet,
@@ -51,19 +52,22 @@ const App: () => React$Node = () => {
         </View>
         <Text style={styles.sectionDescription}>WORKING FUCK YEAH!!!!</Text>
         <View>
-          <Image
+          {/* <Image
             style={{width: 400, height: 400}}
             source={require('./img001.jpg')}
-          />
-          {/* <Video
-            source={require('./output.mp4')}
-            ref={ref => {
-              this.player = ref;
-            }}
-            onBuffer={this.onBuffer}
-            onError={this.videoError}
-            style={styles.backgroundVideo}
           /> */}
+          <View>
+            <Video
+              source={{uri: './output.mp4'}}
+              ref={ref => {
+                console.log(ref);
+                this.videoPlayer = ref;
+              }}
+              // onBuffer={this.onBuffer}
+              // onError={this.videoError}
+              style={styles.backgroundVideo}
+            />
+          </View>
         </View>
       </ScrollView>
     </>
