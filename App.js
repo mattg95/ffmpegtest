@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+// import Video from 'react-native-video';
 import {
   Image,
   StyleSheet,
@@ -54,6 +55,15 @@ const App: () => React$Node = () => {
             style={{width: 400, height: 400}}
             source={require('./img001.jpg')}
           />
+          {/* <Video
+            source={require('./output.mp4')}
+            ref={ref => {
+              this.player = ref;
+            }}
+            onBuffer={this.onBuffer}
+            onError={this.videoError}
+            style={styles.backgroundVideo}
+          /> */}
         </View>
       </ScrollView>
     </>
@@ -96,6 +106,13 @@ const styles = StyleSheet.create({
     padding: 4,
     paddingRight: 12,
     textAlign: 'right',
+  },
+  backgroundVideo: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
   },
 });
 
