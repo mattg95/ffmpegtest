@@ -27,6 +27,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Picture from './src/Picture.js';
+import myvid from './output.mp4';
 
 const App: () => React$Node = () => {
   return (
@@ -58,7 +59,10 @@ const App: () => React$Node = () => {
           /> */}
           <View>
             <Video
-              source={{uri: './output.mp4'}}
+              source={{
+                uri:
+                  'https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4',
+              }}
               ref={ref => {
                 console.log(ref);
                 this.videoPlayer = ref;
