@@ -27,7 +27,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Picture from './src/Picture.js';
-import myvid from './output.mp4';
+import myvid from '/home/mattg95/Documents/proj/ffmpegtest/SampleVideo_1280x720_1mb (1).mp4';
 
 const App: () => React$Node = () => {
   return (
